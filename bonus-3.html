@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GramGenies Agency Starter Kit — Exclusive Bonus</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+:root{--gold:#f5a623;--purple:#7c5cfc;--teal:#00d4aa;--border:#e5e7eb;--muted:#6b7280;--dark:#0c0e13;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',Arial,sans-serif;background:#fff;color:#1a1a2e;font-size:15px;line-height:1.7;}
+.cover{background:linear-gradient(135deg,#0c0e13 0%,#1a1200 60%,#0c0e13 100%);color:#fff;padding:64px 40px;text-align:center;}
+.cover .eyebrow{display:inline-block;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.35);color:#fcd34d;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:24px;}
+.cover h1{font-size:clamp(28px,5vw,50px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:16px;}
+.cover h1 span{background:linear-gradient(135deg,#f5a623,#fde68a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cover .sub{font-size:16px;color:#9ca3af;max-width:560px;margin:0 auto 28px;}
+.doc{max-width:840px;margin:0 auto;padding:48px 32px;}
+h2{font-size:24px;font-weight:800;color:#1a1a2e;margin:48px 0 16px;padding-top:48px;border-top:2px solid var(--border);}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:0;}
+h3{font-size:16px;font-weight:700;color:#1a1a2e;margin:28px 0 10px;}
+p{margin-bottom:16px;color:#374151;}
+ul,ol{margin:0 0 16px 0;padding-left:24px;}
+li{margin-bottom:8px;color:#374151;}
+.slide{background:#fff;border:2px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.slide-header{background:#f3f4f6;padding:14px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);}
+.slide-num{background:var(--gold);color:#000;font-size:11px;font-weight:800;padding:3px 8px;border-radius:5px;}
+.slide-title{font-size:14px;font-weight:700;color:#1a1a2e;}
+.slide-body{padding:18px 20px;}
+.slide-body p{margin-bottom:8px;font-size:14px;color:#374151;}
+.slide-body ul{margin:0;font-size:14px;}
+.slide-note{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
+.callout{background:linear-gradient(135deg,rgba(245,166,35,.06),rgba(124,92,252,.04));border:1px solid rgba(245,166,35,.25);border-radius:12px;padding:20px 24px;margin:24px 0;}
+.callout-title{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.callout p{margin-bottom:0;color:#1a1a2e;}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;}
+th{background:#f3f4f6;text-align:left;padding:10px 14px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);}
+td{padding:10px 14px;border-bottom:1px solid var(--border);font-size:14px;color:#374151;vertical-align:top;}
+.intake-field{background:#f9fafb;border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px;}
+.intake-label{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+.intake-input{width:100%;background:#fff;border:1px solid #d1d5db;border-radius:6px;padding:8px 12px;font-size:13px;color:#9ca3af;font-style:italic;}
+.outreach-block{background:#f9fafb;border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:16px;}
+.outreach-label{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px;}
+.outreach-text{font-size:14px;color:#374151;line-height:1.7;white-space:pre-wrap;}
+.week-card{display:grid;grid-template-columns:80px 1fr;gap:16px;background:#f9fafb;border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px;align-items:flex-start;}
+.week-num{font-size:13px;font-weight:800;color:var(--purple);text-align:center;padding-top:4px;}
+.week-focus{font-size:12px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.week-tasks{font-size:14px;color:#374151;}
+.footer-doc{background:#f9fafb;border-top:2px solid var(--border);padding:32px;text-align:center;font-size:13px;color:var(--muted);}
+@media(max-width:600px){.doc{padding:24px 16px;}.week-card{grid-template-columns:1fr;}.cover{padding:40px 20px;}}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="eyebrow">🎁 Exclusive Bonus #3</div>
+  <h1>The GramGenies<br><span>Agency Starter Kit</span></h1>
+  <p class="sub">Everything you need to start selling Instagram growth as a service — pitch deck, pricing guide, client intake form, 30-day delivery roadmap, and outreach scripts. DFY and ready to use.</p>
+</div>
+
+<div class="doc">
+
+<!-- INTRO -->
+<h2>How to Use This Kit</h2>
+<p>GramGenies gives you commercial rights — meaning you can run AI-powered Instagram growth as a service for clients and charge monthly retainers. This kit is designed to take you from zero to a paying client as fast as possible.</p>
+<p>Inside you'll find:</p>
+<ul>
+  <li><strong>10-Slide Pitch Deck</strong> — ready to present or share as a PDF to potential clients</li>
+  <li><strong>Agency Pricing Guide</strong> — 3 service tiers with pricing logic and what to include</li>
+  <li><strong>Client Intake Form</strong> — what to ask every client before you start</li>
+  <li><strong>30-Day Delivery Roadmap</strong> — exactly what to deliver and when</li>
+  <li><strong>Outreach Scripts</strong> — email + DM templates that land meetings</li>
+</ul>
+
+<div class="callout">
+  <div class="callout-title">The Market Opportunity</div>
+  <p>Instagram has 2 billion monthly users. 90% of those users follow at least one business. The average small business owner knows they need Instagram but has no time or team to do it right. With GramGenies, you can deliver professional-grade results to clients at scale — and charge accordingly.</p>
+</div>
+
+<!-- PITCH DECK -->
+<h2>The 10-Slide Client Pitch Deck</h2>
+<p>Use this as a slide presentation or convert to a PDF proposal. Customize the [brackets] with your specific details.</p>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 1</span><div class="slide-title">The Cover — First Impression</div></div>
+  <div class="slide-body">
+    <p><strong>Headline:</strong> "How [Your Agency Name] Grows Your Instagram — On Autopilot"</p>
+    <p><strong>Subline:</strong> "AI-Powered Instagram Growth for [Niche] Businesses"</p>
+    <p><strong>Include:</strong> Your name/logo, website, contact info</p>
+    <div class="slide-note">Keep it simple. Your name + what you do + the word "autopilot" or "automated" signals this is different from a typical social media agency.</div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 2</span><div class="slide-title">The Problem — Why They're Not Growing</div></div>
+  <div class="slide-body">
+    <p><strong>Title:</strong> "Why Most [Niche] Businesses Are Invisible on Instagram"</p>
+    <ul>
+      <li>Building a real Instagram presence takes consistent content, engagement, and strategy — every single day</li>
+      <li>Most business owners don't have the time, team, or budget to do it right</li>
+      <li>Generic AI tools produce generic content that gets ignored by the algorithm</li>
+      <li>Manual growth tactics are slow, risky, and don't scale</li>
+    </ul>
+    <div class="slide-note">Let the pain land before you introduce the solution. This slide should make them feel seen.</div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 3</span><div class="slide-title">The Solution — What You Offer</div></div>
+  <div class="slide-body">
+    <p><strong>Title:</strong> "A New Kind of Instagram Service — One That Actually Runs Itself"</p>
+    <p>We use AI agents that learn your specific business, then manage your entire Instagram presence: growing real followers, creating branded content, handling DMs, and converting attention into sales — automatically.</p>
+    <ul>
+      <li>✅ Business-specific content — not generic AI output</li>
+      <li>✅ Real follower growth — Meta-approved, no bots, no bans</li>
+      <li>✅ DM automation that converts followers to leads</li>
+      <li>✅ Branded reels for every stage of your funnel</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 4</span><div class="slide-title">How It Works — The 4-Step Process</div></div>
+  <div class="slide-body">
+    <p><strong>Step 1:</strong> We learn your business — offer, voice, audience, and goals</p>
+    <p><strong>Step 2:</strong> AI agents grow your follower base with real, targeted profiles</p>
+    <p><strong>Step 3:</strong> Custom branded content is generated and scheduled automatically</p>
+    <p><strong>Step 4:</strong> DMs and comments are handled in your voice, converting followers to leads</p>
+    <div class="slide-note">Visualize this as a simple 4-box flow diagram in your actual deck. It's much cleaner than text.</div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 5</span><div class="slide-title">The Results — What to Expect</div></div>
+  <div class="slide-body">
+    <p><strong>Typical results our clients see:</strong></p>
+    <ul>
+      <li>200–500 new real followers per month (Month 1–2)</li>
+      <li>500–2,000+ new followers per month (Month 3+)</li>
+      <li>3–8x increase in post engagement</li>
+      <li>10–30 qualified DM conversations per month</li>
+      <li>$2,000–$15,000/month in attributable revenue (varies by offer)</li>
+    </ul>
+    <div class="slide-note">If you have a real case study or client result, use that instead. Real numbers from real clients outperform any generic stat.</div>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 6</span><div class="slide-title">Why This Is Different</div></div>
+  <div class="slide-body">
+    <p><strong>Unlike traditional social media agencies:</strong></p>
+    <table style="margin:0;font-size:13px;">
+      <thead><tr><th>Traditional Agency</th><th>Our Service</th></tr></thead>
+      <tbody>
+        <tr><td>Generic content for all clients</td><td>Business-specific content for yours</td></tr>
+        <tr><td>Manual posting = human bottleneck</td><td>Fully automated = consistent output</td></tr>
+        <tr><td>$3,000–$8,000/mo for a team</td><td>Same results, fraction of the cost</td></tr>
+        <tr><td>Slow to adapt to trends</td><td>AI scans trends in real-time</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 7</span><div class="slide-title">Our Packages — Pricing</div></div>
+  <div class="slide-body">
+    <p>See the full pricing guide on the next page for details. In your deck, present the 3 tiers clearly with the middle tier highlighted as "most popular."</p>
+    <p><strong>Starter · $500/mo</strong> — Profile setup, weekly content, basic DM automation</p>
+    <p><strong>Growth · $1,000/mo</strong> — Full automation, branded reels, lead pipeline</p>
+    <p><strong>Agency · $2,000/mo</strong> — Priority management, full pipeline, reporting</p>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 8</span><div class="slide-title">What's Included</div></div>
+  <div class="slide-body">
+    <ul>
+      <li>Initial business and audience deep-dive session (60 min)</li>
+      <li>AI agent setup and training specific to your brand</li>
+      <li>Monthly content calendar + scheduled posts</li>
+      <li>DM automation setup and ongoing management</li>
+      <li>Monthly performance report with growth metrics</li>
+      <li>Ongoing optimization based on what's working</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 9</span><div class="slide-title">About [Your Name/Agency]</div></div>
+  <div class="slide-body">
+    <p>Add your personal story, relevant experience, or credentials here. Key points to hit:</p>
+    <ul>
+      <li>Why you specialize in Instagram/social media growth</li>
+      <li>Why you chose AI-powered tools over traditional methods</li>
+      <li>Any relevant results you've achieved (personal or client)</li>
+      <li>Your commitment to their success (monthly reviews, open communication)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="slide">
+  <div class="slide-header"><span class="slide-num">Slide 10</span><div class="slide-title">The Next Step — CTA</div></div>
+  <div class="slide-body">
+    <p><strong>Title:</strong> "Ready to Grow Your Instagram on Autopilot?"</p>
+    <p>Here's what happens next:</p>
+    <ol>
+      <li>Book a 30-minute discovery call (use Calendly link)</li>
+      <li>We'll map out your Instagram growth strategy together</li>
+      <li>No obligation — just a clear plan you can act on</li>
+    </ol>
+    <p><strong>Book here: [your Calendly link]</strong></p>
+    <div class="slide-note">Make the CTA as low-friction as possible. "30-minute call, no pressure" converts much better than "sign up now."</div>
+  </div>
+</div>
+
+<!-- PRICING GUIDE -->
+<h2>Agency Pricing Guide</h2>
+<p>Use this as your reference when quoting clients. These prices are set for the current market (2026) and reflect the genuine value of AI-powered Instagram management vs. traditional agencies charging $3K–$8K/month for the same results.</p>
+
+<table>
+<thead><tr><th>Tier</th><th>Price</th><th>What's Included</th><th>Best For</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>Starter</strong></td>
+  <td>$500/mo</td>
+  <td>Profile audit + setup, 3 posts/week, basic DM welcome sequence, monthly metrics report</td>
+  <td>Small local businesses, solopreneurs, new to Instagram</td>
+</tr>
+<tr>
+  <td><strong>Growth</strong><br><small style="color:var(--gold);font-weight:700;">Most Popular</small></td>
+  <td>$1,000/mo</td>
+  <td>Everything in Starter + daily posting, branded reels (4/mo), full DM automation + lead pipeline, trend monitoring, bi-weekly strategy call</td>
+  <td>Established businesses ready to scale, coaches, online brands</td>
+</tr>
+<tr>
+  <td><strong>Agency</strong></td>
+  <td>$2,000/mo</td>
+  <td>Everything in Growth + priority support, 8 branded reels/mo, custom content strategy, competitor analysis, full performance dashboard, quarterly deep-dive review</td>
+  <td>Multi-location businesses, premium brands, high-ticket offer owners</td>
+</tr>
+<tr>
+  <td><strong>Setup Fee</strong></td>
+  <td>$300 (one-time)</td>
+  <td>GramGenies AI training, brand voice setup, initial content templates, DM sequence configuration</td>
+  <td>All tiers — charged upfront with first month</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">💡 Pricing Psychology</div>
+  <p>Always present all three tiers. The existence of the $2,000 tier makes the $1,000 tier feel like the smart middle choice — and most clients will choose it. Never lead with the cheapest option, always with the Growth tier framed as "most popular."</p>
+</div>
+
+<!-- INTAKE FORM -->
+<h2>Client Intake Form</h2>
+<p>Send this to every new client before your onboarding call. The answers train GramGenies' AI and save hours of back-and-forth.</p>
+
+<div class="intake-field"><div class="intake-label">Business Name & Website</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">What does your business do? (In plain English — no jargon)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">Who is your ideal customer? (Age, job, problem they have, what they want)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">What's your main offer? (Product/service, price, how they buy)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">Describe your brand voice: (e.g., professional, friendly, bold, educational, humorous)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">List 3–5 Instagram accounts your ideal customer likely follows</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">What's your primary goal for Instagram? (Followers, leads, sales, brand awareness)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">What topics can we NEVER post about? (Brand restrictions, sensitivities)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">Do you have existing brand assets? (Logo, colors, fonts, brand guide — share link)</div><div class="intake-input">Your answer here</div></div>
+<div class="intake-field"><div class="intake-label">What does success look like to you in 90 days?</div><div class="intake-input">Your answer here</div></div>
+
+<!-- 30-DAY ROADMAP -->
+<h2>30-Day Client Delivery Roadmap</h2>
+<p>Follow this for every new client. It sets clear expectations, delivers value fast, and builds the trust needed for long-term retention.</p>
+
+<div class="week-card">
+  <div class="week-num">Week 1<br><small style="font-weight:500;color:var(--muted);">Days 1–7</small></div>
+  <div>
+    <div class="week-focus">Setup & Onboarding</div>
+    <div class="week-tasks">
+      Complete intake form review → Train GramGenies AI on client's brand, voice, and niche → Audit existing Instagram account → Set up DM welcome sequence → Create initial content calendar → Schedule first week of posts → Deliver: "Here's your Week 1 plan" email to client.
+    </div>
+  </div>
+</div>
+
+<div class="week-card">
+  <div class="week-num">Week 2<br><small style="font-weight:500;color:var(--muted);">Days 8–14</small></div>
+  <div>
+    <div class="week-focus">Content Foundation</div>
+    <div class="week-tasks">
+      Monitor first week's performance → Adjust posting strategy based on early engagement data → Activate follower growth automation → Create branded reels (if Growth/Agency tier) → Begin DM lead pipeline → Deliver: first weekly metrics snapshot to client.
+    </div>
+  </div>
+</div>
+
+<div class="week-card">
+  <div class="week-num">Week 3<br><small style="font-weight:500;color:var(--muted);">Days 15–21</small></div>
+  <div>
+    <div class="week-focus">Optimization</div>
+    <div class="week-tasks">
+      Review what's working (engagement, reach, follower quality) → Double down on top-performing content formats → Fine-tune DM sequences based on reply patterns → Report: mid-month check-in with client (15-minute call or Loom video update).
+    </div>
+  </div>
+</div>
+
+<div class="week-card">
+  <div class="week-num">Week 4<br><small style="font-weight:500;color:var(--muted);">Days 22–30</small></div>
+  <div>
+    <div class="week-focus">Results & Renewal</div>
+    <div class="week-tasks">
+      Compile monthly performance report → Highlight: new followers, engagement rate change, DM conversations, leads generated → Present Month 2 strategy → Discuss renewal or upgrade → Deliver: full report + Month 2 content calendar preview.
+    </div>
+  </div>
+</div>
+
+<!-- OUTREACH SCRIPTS -->
+<h2>Outreach Scripts — Land Your First Client</h2>
+
+<h3>Cold DM Script (Instagram)</h3>
+<div class="outreach-block">
+  <div class="outreach-label" style="color:var(--purple);">📲 Instagram DM — First Message</div>
+  <div class="outreach-text">Hey [Name] — I've been following [business name] for a while. Love what you're building.
+
+I noticed your Instagram has great content but the growth seems slower than what the account deserves. 
+
+I specialize in AI-powered Instagram growth for [their niche] businesses. I've been getting clients to [specific result, e.g., 500+ real followers/month] without any bots or ad spend.
+
+Would it be weird to share a quick idea I had specifically for [business name]?</div>
+</div>
+
+<div class="outreach-block">
+  <div class="outreach-label" style="color:var(--purple);">📲 Instagram DM — Follow-Up (if no reply after 3 days)</div>
+  <div class="outreach-text">Just wanted to bump this in case it got buried — no pressure at all.
+
+Quick version: I help [niche] businesses grow their Instagram using AI agents that learn the business and run the account automatically. Real followers, real engagement.
+
+Happy to share a 5-minute Loom showing what it looks like for [business name] specifically. Worth a look?</div>
+</div>
+
+<h3>Cold Email Script</h3>
+<div class="outreach-block">
+  <div class="outreach-label" style="color:var(--gold);">📧 Cold Email — Subject: Quick Instagram idea for [Business Name]</div>
+  <div class="outreach-text">Hi [First Name],
+
+I came across [business name] while researching [their niche] businesses in [location/industry].
+
+Quick context: I help [niche] businesses grow their Instagram automatically using AI agents — no bots, no paid ads, no manual posting. The agents learn the business and run the account in the owner's voice.
+
+Most clients see 200–500 new real followers in the first month and 10–30 qualified DM conversations per month with their ideal customers.
+
+I had a specific idea for [business name] based on your [product/service/audience]. Would you be open to a 15-minute call to walk through it?
+
+Here's my calendar: [Calendly link]
+
+[Your name]
+[Your agency name]</div>
+</div>
+
+<h3>Follow-Up Email (5 days after no reply)</h3>
+<div class="outreach-block">
+  <div class="outreach-label" style="color:var(--teal);">📧 Follow-Up Email — Subject: Re: Quick Instagram idea for [Business Name]</div>
+  <div class="outreach-text">Hi [First Name],
+
+Bumping this in case it got buried — completely understand if the timing's off.
+
+I put together a quick 3-minute Loom showing what an Instagram growth system would look like for [business name] specifically. No obligation — just something concrete to react to.
+
+[Loom video link]
+
+If it's not a fit, totally fine. If it is, my calendar's open this week:
+[Calendly link]
+
+[Your name]</div>
+</div>
+
+<div class="callout">
+  <div class="callout-title">💰 The Math on Your First Month</div>
+  <p>You need <strong>2 Growth-tier clients</strong> ($1,000/mo each) to cover your GramGenies subscription and make a profit. After that, every new client is pure margin. Most people land their first client within 2–3 weeks of consistent outreach using these scripts.</p>
+</div>
+
+</div>
+
+<div class="footer-doc">
+  <strong>GramGenies Agency Starter Kit</strong> — Exclusive Bonus #3<br>
+  Delivered by Adrian · <a href="bonuses.html" style="color:var(--gold);">Back to all bonuses</a>
+</div>
+
+</body>
+</html>
