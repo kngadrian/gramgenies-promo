@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Exclusive Bonuses — GramGenies</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    :root {
+      --bg: #070910;
+      --purple: #7c5cfc;
+      --purple-light: #9d82fd;
+      --teal: #00d4aa;
+      --gold: #f5a623;
+      --pink: #ff6b9d;
+      --text: #e8eaf0;
+      --muted: #6b7280;
+      --card: #0e1118;
+      --card2: #131720;
+      --border: #1e2433;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+
+    /* BG GLOW */
+    .glow-bg {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 20% 10%, rgba(124,92,252,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 300px at 80% 80%, rgba(0,212,170,.08) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 50% 50%, rgba(245,166,35,.04) 0%, transparent 70%);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative; z-index: 1;
+      padding: 80px 24px 60px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 600px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--purple), transparent);
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(124,92,252,.12); border: 1px solid rgba(124,92,252,.3);
+      color: var(--purple-light); font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 7px 16px; border-radius: 100px; margin-bottom: 28px;
+    }
+    .hero-eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--purple-light); animation: blink 1.5s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,166,35,.12); border: 1px solid rgba(245,166,35,.3);
+      color: var(--gold); font-size: 12px; font-weight: 700;
+      padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; margin-left: 8px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px); font-weight: 900; line-height: 1.1;
+      color: #fff; letter-spacing: -1.5px; margin-bottom: 20px;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--purple-light) 0%, var(--teal) 50%, var(--gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-sub {
+      font-size: 17px; color: #9ca3af; max-width: 560px; margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+    .hero-sub strong { color: var(--text); }
+
+    /* TOTAL VALUE BADGE */
+    .value-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, rgba(124,92,252,.15), rgba(0,212,170,.1));
+      border: 1px solid rgba(124,92,252,.4);
+      border-radius: 16px; padding: 16px 28px; margin-bottom: 16px;
+    }
+    .value-badge .num { font-size: 32px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
+    .value-badge .label { text-align: left; }
+    .value-badge .label-top { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; }
+    .value-badge .label-bot { font-size: 14px; color: var(--text); font-weight: 700; }
+
+    .hero-note { font-size: 13px; color: var(--muted); }
+    .hero-note strong { color: var(--teal); }
+
+    /* STEPS */
+    .steps-section { position: relative; z-index: 1; padding: 48px 24px 0; text-align: center; }
+    .steps-section h2 { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 28px; }
+    .steps { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; max-width: 700px; margin: 0 auto; }
+    .step { display: flex; align-items: center; gap: 10px; padding: 10px 16px; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(124,92,252,.2); border: 1.5px solid var(--purple); color: var(--purple-light); font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-text { font-size: 13px; color: #9ca3af; font-weight: 500; }
+    .step-arrow { color: var(--border); font-size: 18px; padding: 0 4px; }
+
+    /* SECTION */
+    .section { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 64px 24px; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { font-size: clamp(28px, 4vw, 38px); font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 10px; }
+    .section-header p { font-size: 15px; color: var(--muted); }
+
+    /* BONUS CARDS */
+    .bonus-list { display: flex; flex-direction: column; gap: 28px; }
+
+    .bonus-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform .2s, border-color .2s;
+    }
+    .bonus-card:hover { transform: translateY(-2px); }
+    .bonus-card.b1 { border-color: rgba(124,92,252,.3); }
+    .bonus-card.b2 { border-color: rgba(0,212,170,.25); }
+    .bonus-card.b3 { border-color: rgba(245,166,35,.3); }
+
+    .bonus-inner { display: grid; grid-template-columns: auto 1fr; gap: 0; }
+
+    .bonus-sidebar {
+      width: 72px; min-height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+      padding: 28px 0 28px;
+    }
+    .b1 .bonus-sidebar { background: linear-gradient(180deg, rgba(124,92,252,.15) 0%, rgba(124,92,252,.05) 100%); }
+    .b2 .bonus-sidebar { background: linear-gradient(180deg, rgba(0,212,170,.12) 0%, rgba(0,212,170,.04) 100%); }
+    .b3 .bonus-sidebar { background: linear-gradient(180deg, rgba(245,166,35,.12) 0%, rgba(245,166,35,.04) 100%); }
+
+    .bonus-icon { font-size: 28px; margin-bottom: 12px; }
+    .bonus-num-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 1px;
+      text-transform: uppercase; writing-mode: vertical-rl;
+      transform: rotate(180deg); margin-top: 8px;
+    }
+    .b1 .bonus-num-label { color: rgba(124,92,252,.6); }
+    .b2 .bonus-num-label { color: rgba(0,212,170,.6); }
+    .b3 .bonus-num-label { color: rgba(245,166,35,.6); }
+
+    .bonus-body { padding: 28px 28px 28px 20px; }
+
+    .bonus-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+    .bonus-badge {
+      font-size: 10px; font-weight: 800; letter-spacing: .8px;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 6px;
+    }
+    .b1 .bonus-badge { background: rgba(124,92,252,.15); color: var(--purple-light); }
+    .b2 .bonus-badge { background: rgba(0,212,170,.12); color: var(--teal); }
+    .b3 .bonus-badge { background: rgba(245,166,35,.12); color: var(--gold); }
+    .bonus-value-tag { font-size: 11px; color: var(--muted); font-weight: 600; }
+    .bonus-value-strike { text-decoration: line-through; color: var(--muted); margin-right: 4px; }
+    .bonus-value-free { color: var(--teal); font-weight: 700; }
+
+    .bonus-title { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -.5px; margin-bottom: 10px; line-height: 1.2; }
+    .bonus-desc { font-size: 14px; color: #9ca3af; line-height: 1.7; margin-bottom: 18px; }
+
+    .bonus-features { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 22px; }
+    .bonus-feature { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: #9ca3af; line-height: 1.5; }
+    .bonus-feature .check { flex-shrink: 0; font-size: 14px; }
+    .b1 .bonus-feature .check { color: var(--purple-light); }
+    .b2 .bonus-feature .check { color: var(--teal); }
+    .b3 .bonus-feature .check { color: var(--gold); }
+
+    .bonus-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 10px; font-size: 14px; font-weight: 700;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: opacity .15s, transform .15s;
+    }
+    .bonus-cta:hover { opacity: .88; transform: translateY(-1px); }
+    .b1 .bonus-cta { background: linear-gradient(135deg, var(--purple), #5b3fd4); color: #fff; }
+    .b2 .bonus-cta { background: linear-gradient(135deg, var(--teal), #009e7e); color: #000; }
+    .b3 .bonus-cta { background: linear-gradient(135deg, var(--gold), #d4860e); color: #000; }
+    .cta-soon { opacity: .4; cursor: not-allowed; }
+
+    /* DIVIDER */
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 0 24px; }
+
+    /* HOW IT WORKS */
+    .how-section { position: relative; z-index: 1; padding: 64px 24px; text-align: center; background: rgba(255,255,255,.015); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .how-section h2 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 12px; }
+    .how-section p { font-size: 15px; color: var(--muted); margin-bottom: 40px; }
+    .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 860px; margin: 0 auto; }
+    .how-card { background: var(--card2); border: 1px solid var(--border); border-radius: 14px; padding: 22px 20px; text-align: left; }
+    .how-num { font-size: 28px; font-weight: 900; color: var(--purple); opacity: .4; margin-bottom: 10px; }
+    .how-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .how-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* STACK SECTION */
+    .stack-section { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+    .stack-section h2 { font-size: clamp(24px, 3.5vw, 34px); font-weight: 900; color: #fff; letter-spacing: -1px; margin-bottom: 12px; }
+    .stack-section p { font-size: 15px; color: var(--muted); margin-bottom: 40px; }
+    .stack-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .stack-item { background: var(--card2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 20px; display: flex; align-items: center; gap: 10px; }
+    .stack-item .ico { font-size: 22px; }
+    .stack-item .lbl { font-size: 13px; font-weight: 700; color: var(--text); }
+    .stack-item .sub { font-size: 11px; color: var(--muted); }
+    .stack-arrow { font-size: 22px; color: var(--purple); opacity: .5; }
+
+    /* FOOTER */
+    .footer-section { position: relative; z-index: 1; text-align: center; padding: 48px 24px; border-top: 1px solid var(--border); }
+    .footer-section .logo { font-size: 26px; margin-bottom: 10px; }
+    .footer-section p { font-size: 13px; color: var(--muted); max-width: 480px; margin: 0 auto 8px; line-height: 1.7; }
+    .footer-section a { color: var(--purple-light); text-decoration: none; }
+
+    /* RESPONSIVE */
+    @media(max-width:640px) {
+      .bonus-inner { grid-template-columns: 1fr; }
+      .bonus-sidebar { width: 100%; min-height: unset; flex-direction: row; padding: 16px 20px; writing-mode: unset; }
+      .bonus-num-label { writing-mode: unset; transform: none; }
+      .bonus-features { grid-template-columns: 1fr; }
+      .steps { flex-direction: column; gap: 4px; }
+      .step-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+<div class="glow-bg"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <span class="hero-eyebrow"><span class="dot"></span>Exclusive Buyer Bonuses</span>
+    <span class="hero-tag">🎁 $591 in Free Bonuses</span>
+  </div>
+  <h1>
+    You Made a Smart Move.<br />
+    <span class="gradient">Now Let's Make It Unstoppable.</span>
+  </h1>
+  <p class="hero-sub">
+    You grabbed GramGenies. Here are your <strong>3 exclusive bonus tools</strong> — designed to make your results 10x faster and worth way more than what you paid.
+  </p>
+  <div class="value-badge">
+    <div class="num">$591</div>
+    <div class="label">
+      <div class="label-top">Total Bonus Value</div>
+      <div class="label-bot">100% Free — For Buyers Only</div>
+    </div>
+  </div>
+  <br />
+  <div class="hero-note">Purchased via <strong>Adrian's affiliate link</strong> · Delivered exclusively to this page</div>
+</div>
+
+<!-- HOW TO CLAIM -->
+<div class="steps-section">
+  <h2>How to claim your bonuses</h2>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">Confirm your GramGenies purchase</div></div>
+    <div class="step-arrow">→</div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">Click the button on each bonus below</div></div>
+    <div class="step-arrow">→</div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">Download or access instantly</div></div>
+  </div>
+</div>
+
+<!-- BONUSES -->
+<div class="section">
+  <div class="section-header">
+    <h2>Your 3 Exclusive Bonuses</h2>
+    <p>Available only through this page — not sold anywhere else</p>
+  </div>
+
+  <div class="bonus-list">
+
+    <!-- BONUS 1 -->
+    <div class="bonus-card b1">
+      <div class="bonus-inner">
+        <div class="bonus-sidebar">
+          <div class="bonus-icon">🗺️</div>
+          <div class="bonus-num-label">Bonus 1</div>
+        </div>
+        <div class="bonus-body">
+          <div class="bonus-meta">
+            <span class="bonus-badge">Blueprint</span>
+            <span class="bonus-value-tag"><span class="bonus-value-strike">$197</span> <span class="bonus-value-free">FREE</span></span>
+          </div>
+          <div class="bonus-title">Instagram Revenue Blueprint</div>
+          <div class="bonus-desc">
+            The exact system for turning Instagram followers into paying customers — using GramGenies, Creativio AI, and CallFluent AI as one fully automated revenue pipeline. Built for founders who want results, not theory.
+          </div>
+          <div class="bonus-features">
+            <div class="bonus-feature"><span class="check">✦</span><span>The "5-post weekly rhythm" that keeps the Instagram algorithm pushing your content</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>DM sequence that converts followers into booked calls automatically</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Full pipeline: Instagram → Email → AI Phone Closer (no ads required)</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Tool stack walkthrough: GramGenies + Creativio AI + CallFluent AI working together</span></div>
+          </div>
+          <a href="#" class="bonus-cta cta-soon">
+            <span>📥</span> Coming Soon — Being Prepared
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BONUS 2 -->
+    <div class="bonus-card b2">
+      <div class="bonus-inner">
+        <div class="bonus-sidebar">
+          <div class="bonus-icon">⚡</div>
+          <div class="bonus-num-label">Bonus 2</div>
+        </div>
+        <div class="bonus-body">
+          <div class="bonus-meta">
+            <span class="bonus-badge">Swipe File</span>
+            <span class="bonus-value-tag"><span class="bonus-value-strike">$97</span> <span class="bonus-value-free">FREE</span></span>
+          </div>
+          <div class="bonus-title">50 Viral Caption Templates + Creativio AI Prompt Pack</div>
+          <div class="bonus-desc">
+            A done-for-you content kit that plugs directly into GramGenies' content engine. 50 proven viral caption frameworks across 5 niches, plus 25 Creativio AI prompts to generate matching on-brand visuals for every post type.
+          </div>
+          <div class="bonus-features">
+            <div class="bonus-feature"><span class="check">✦</span><span>5 niches: AI tools, digital marketing, agency, e-commerce, personal brand</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>5 hook formats: curiosity, controversy, story, list, question — with examples</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>25 Creativio AI prompts paired to matching caption styles</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Hashtag research method that works with GramGenies' Trend Genie</span></div>
+          </div>
+          <a href="#" class="bonus-cta cta-soon">
+            <span>📥</span> Coming Soon — Being Prepared
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BONUS 3 -->
+    <div class="bonus-card b3">
+      <div class="bonus-inner">
+        <div class="bonus-sidebar">
+          <div class="bonus-icon">🏢</div>
+          <div class="bonus-num-label">Bonus 3</div>
+        </div>
+        <div class="bonus-body">
+          <div class="bonus-meta">
+            <span class="bonus-badge">Agency Kit</span>
+            <span class="bonus-value-tag"><span class="bonus-value-strike">$297</span> <span class="bonus-value-free">FREE</span></span>
+          </div>
+          <div class="bonus-title">The GramGenies Agency Starter Kit</div>
+          <div class="bonus-desc">
+            A complete done-for-you business package for selling Instagram growth as a service — using GramGenies' Commercial Rights. Everything you need to land your first client and start charging $500–$2,000/month.
+          </div>
+          <div class="bonus-features">
+            <div class="bonus-feature"><span class="check">✦</span><span>10-slide client pitch deck (fully editable, professional design)</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Instagram agency pricing guide: $500–$2,000/mo service tiers</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Client intake form + 30-day delivery roadmap template</span></div>
+            <div class="bonus-feature"><span class="check">✦</span><span>Email + DM outreach scripts for landing your first paying client</span></div>
+          </div>
+          <a href="#" class="bonus-cta cta-soon">
+            <span>📥</span> Coming Soon — Being Prepared
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- HOW IT WORKS TOGETHER -->
+<div class="how-section">
+  <h2>How These Bonuses Work Together</h2>
+  <p>Each bonus builds on the last to give you a complete, automated business system</p>
+  <div class="how-grid">
+    <div class="how-card">
+      <div class="how-num">01</div>
+      <div class="how-title">GramGenies builds your audience</div>
+      <div class="how-desc">Your AI Genies attract real, targeted followers and handle all engagement in your voice — 24/7.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">02</div>
+      <div class="how-title">The Caption Pack fuels content</div>
+      <div class="how-desc">50 proven frameworks + AI image prompts keep your feed active and algorithmic without the thinking.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">03</div>
+      <div class="how-title">The Blueprint converts followers</div>
+      <div class="how-desc">The exact DM and funnel system that turns Instagram attention into leads, calls, and sales.</div>
+    </div>
+    <div class="how-card">
+      <div class="how-num">04</div>
+      <div class="how-title">The Agency Kit creates income</div>
+      <div class="how-desc">If you want to sell this as a service — the pitch deck, pricing guide, and scripts are ready to go.</div>
+    </div>
+  </div>
+</div>
+
+<!-- YOUR AI STACK -->
+<div class="stack-section">
+  <h2>Your Complete AI Business Stack</h2>
+  <p>These bonuses are designed to connect your existing tools into one automated system</p>
+
+  <div class="stack-row">
+    <div class="stack-item">
+      <div class="ico">🧞</div>
+      <div>
+        <div class="lbl">GramGenies</div>
+        <div class="sub">Grows & engages Instagram</div>
+      </div>
+    </div>
+    <div class="stack-arrow">→</div>
+    <div class="stack-item">
+      <div class="ico">🎨</div>
+      <div>
+        <div class="lbl">Creativio AI</div>
+        <div class="sub">Generates branded visuals</div>
+      </div>
+    </div>
+    <div class="stack-arrow">→</div>
+    <div class="stack-item">
+      <div class="ico">📞</div>
+      <div>
+        <div class="lbl">CallFluent AI</div>
+        <div class="sub">Closes leads on autopilot</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px;font-size:14px;color:var(--muted)">The <strong style="color:var(--text)">Instagram Revenue Blueprint</strong> (Bonus 1) shows you exactly how to wire all three together.</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-section">
+  <div class="logo">🧞</div>
+  <p>These bonuses are exclusively for customers who purchased GramGenies through <strong style="color:#fff">Adrian's affiliate link</strong>. If you have any questions about bonus delivery, reach out at <a href="mailto:support@usecorex.com">support@usecorex.com</a>.</p>
+  <p style="margin-top:8px;font-size:12px;color:#374151;">GramGenies is a product of VineasX. Bonuses are provided by Adrian independently of GramGenies.</p>
+</div>
+
+</body>
+</html>
